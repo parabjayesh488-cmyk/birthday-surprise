@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Letter For You 💌</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+
+    .letter-box {
+      background: white;
+      width: 85%;
+      max-width: 400px;
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      z-index: 2;
+    }
+
+    .letter-box h2 {
+      color: #ff4d6d;
+      margin-bottom: 15px;
+    }
+
+    .letter-box p {
+      color: #444;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* Flying Hearts */
+    .heart {
+      position: absolute;
+      color: red;
+      font-size: 18px;
+      animation: floatUp 6s linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="letter-box">
+    <h2>My Best one💌</h2>
+    <p>
+      You are the most important part of my life. You are you. No matter how much you say that I am this or that, the truth is there is truly no one like you. Even if I say thank you a thousand times, it will still feel less. Having your support in every small and big thing makes me feel something very special. Your presence itself means everything to me. Keep smiling like this always, stay happy forever, and honestly, there is some kind of magic in you. My cute best one, lots and lots of love for you — for a lifetime. Once again, Happy Birthday, my prettiest princess.👸🏻💖🫂🥰🧿
+      
+      <b>lost of love for Forever 💕</b>
+    </p>
+  </div>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = Math.random() * 20 + 10 + "px";
+      heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
